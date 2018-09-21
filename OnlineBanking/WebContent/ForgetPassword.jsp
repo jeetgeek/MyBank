@@ -43,14 +43,13 @@
 		<div class="sub-main-w3">
 			<form action="ForgetPasswordServ" method="post">
 			<div class="form-style-agile">
-					<label>Account Number</label>
+					<label>User id</label>
 					<div class="pom-agile">
-						<input placeholder="Account Number" name="accnum" type="text"
+						<input placeholder="User id" name="userid" type="text"
 							required="">
 					</div>
 				</div>
-			
-				<div class="">
+			<div class="">
 					<label>Select Question</label>
 					<div class="pom-agile">
 						<select name="que">

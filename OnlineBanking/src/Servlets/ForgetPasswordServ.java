@@ -41,15 +41,15 @@ public class ForgetPasswordServ extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String accNo = (String) request.getParameter("accnum");
+		String userid = (String) request.getParameter("userid");
 		String que = (String) request.getParameter("que");
 		String answer = (String) request.getParameter("answer");
 		UserDAO obj=new  UserDAO();
 		try {
-			if(obj.forgetPasssword(accNo, que, answer))
+			if(obj.forgetPasssword(userid, que, answer))
 			{
 			
-				request.setAttribute("accountnum", accNo);
+				request.setAttribute("userid", userid);
 				RequestDispatcher rs= request.getRequestDispatcher("PasswordChange.jsp");
 				rs.forward(request, response);
 			

@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.UserDAO"%>
+<%@page import="java.util.List"%>
 <%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -46,6 +49,8 @@ body {
 
 </style>
 </head>
+
+
 <body background="images/1.jpg">
 <div class="topnav">
   <a class="active" href="#home">Home</a>
