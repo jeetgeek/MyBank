@@ -1,0 +1,29 @@
+                          
+
+                                            Online Banking System
+
+                        Online Banking System is a website which provides the facility of
+                        net banking to the users. Through this website an user can view 
+                        types of accounts he/she has within the bank , can view the list 
+                        of transactions user has done in the past and gets the functionality
+                        of funds transfer through which the user can transfer the money to another
+                        account and can add money from another account to his/her account. 
+
+
+                                  Process Flow of Online Banking Website
+
+   -> User can view the layout of the website and choose the desired option from the navigation bar.
+   -> User can register himself/herself with the help of account number and userid provided by us(bank).
+   -> User can login with the help of userid and password.
+   -> If User forgets his/her password he/she can regenerate it by clicking on the forgot password hyperlink.
+   -> After being logged in , user gets the list of types of accounts he/she has.
+   -> After choosing the appropriate account from the list , user will be navigated to the particular selected 
+      account page from the list.
+   -> On the account page user can view his/her current balance in the account , no.of transactions he/she has done 
+      in the past.
+   -> For money transfer user can choose the option of funds transfer on the account page itself.
+   -> Funds transfer option will ask for login , user can login with account number and the password he/she has
+      generated at the time of registration.
+   -> 
+
+
