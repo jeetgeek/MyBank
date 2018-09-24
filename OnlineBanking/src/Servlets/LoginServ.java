@@ -3,6 +3,7 @@ package Servlets;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -30,13 +31,16 @@ public class LoginServ extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String name=(String)request.getParameter("Name");
+		String userid=(String)request.getParameter("userid");
 		String password=(String)request.getParameter("Password");
 		UserDAO obj=new UserDAO();
 		try {
-			if(obj.validateUser(name, password))
+			if(obj.validateUser(userid, password))
 			{
-				response.sendRedirect("AccountType.jsp");
+
+				request.setAttribute("userid", userid);
+				RequestDispatcher rs= request.getRequestDispatcher("AccountType.jsp");
+				rs.forward(request, response);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

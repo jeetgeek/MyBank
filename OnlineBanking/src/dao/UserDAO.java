@@ -18,10 +18,10 @@ public class UserDAO {
 	}
 	
 	public boolean validateAccountNumber(User u) throws SQLException
-	{ 	String query="select * from Account where Account_Id=?";
+	{ 	String query="select * from Account where account_num1 in(select account_num from user_account_num where id=? )";
 		con=ConnectionProvider.getConnection();
 		ps=con.prepareStatement(query);
-		ps.setString(1, u.getAccNo());
+		ps.setString(1, u.getUserId());
 		rs=ps.executeQuery();
 		
 	boolean result=rs.next();
@@ -30,24 +30,23 @@ public class UserDAO {
 	
 	public void insertUser(User u) throws SQLException
 	{
-		String query="insert into user1 values (?,?,?,?,?,?,?,?)";
+		String query="insert into user_reg values (?,?,?,?,?,?,?)";
 		con=ConnectionProvider.getConnection();
 		ps=con.prepareStatement(query);
 		ps.setString(1, u.getfName());
 		ps.setString(2, u.getlName());
 		ps.setString(3, u.getAddress());
-		ps.setString(4, u.getAccNo());
-		ps.setString(5, u.getUserId());
-		ps.setString(6, u.getQue());
-		ps.setString(7, u.getAns());
-		ps.setString(8, u.getPassword());
+		ps.setString(4, u.getQue());
+		ps.setString(5, u.getAns());
+		ps.setString(6, u.getUserId());
+		ps.setString(7, u.getPassword());
 		rs=ps.executeQuery();
 		
 	}
 	
 	public boolean validateUser(String username,String password) throws SQLException
 	{
-		String query="select * from user1 where userid=? and password=?";
+		String query="select * from user_reg where id1=? and password=?";
 		con=ConnectionProvider.getConnection();
 		ps=con.prepareStatement(query);
 		ps.setString(1, username);
@@ -57,12 +56,12 @@ public class UserDAO {
 		return result;
 		
 	}
-	public boolean forgetPasssword(String accountnum,String que,String answer) throws SQLException
+	public boolean forgetPasssword(String userid,String que,String answer) throws SQLException
 	{
-		String query="select * from user1 where account_id=? and que=? and answer=?";
+		String query="select * from user_reg where id1=? and que=? and ans=?";
 		con=ConnectionProvider.getConnection();
 		ps=con.prepareStatement(query);
-		ps.setString(1, accountnum);
+		ps.setString(1, userid);
 		ps.setString(2, que);
 		ps.setString(3, answer);
 		rs=ps.executeQuery();
@@ -71,17 +70,54 @@ public class UserDAO {
 		return result;
 		
 	}
-	public boolean changePassword(String password,String accountnum) throws SQLException
+	public boolean changePassword(String password,String userid) throws SQLException
 	{
-		String query="update user1 set password=? where account_id=?";
+		String query="update user_reg set password=? where id1=?";
 		con=ConnectionProvider.getConnection();
 		ps=con.prepareStatement(query);
 		ps.setString(1, password);
-		ps.setString(2, accountnum);
+		ps.setString(2, userid);
 		rs=ps.executeQuery();
 		boolean result=rs.next();
 		System.out.println(result);
 		return result;
 		
 	}
+	
+	public ResultSet accountype(String userid) throws SQLException
+	{   
+		String query="select account_type from account where ACCOUNT_NUM1 in (select account_num from user_account_num where id=?)";
+		con=ConnectionProvider.getConnection();
+		ps=con.prepareStatement(query);
+		ps.setString(1, userid);
+		rs=ps.executeQuery();
+		
+		return rs;
+		
+	}
+	public boolean validateTransactionPassword(String accountnum,String password) throws SQLException
+	{ 	String query="select * from Account where account_num1=? and transaction_password=?";
+		con=ConnectionProvider.getConnection();
+		ps=con.prepareStatement(query);
+		ps.setString(1, accountnum);
+		ps.setString(2, password);
+		rs=ps.executeQuery();
+		
+	boolean result=rs.next();
+		return result;	
+	}
+	public ResultSet TransactionByDate(String Date1 , String Date2) throws SQLException
+	{   
+		String query="select * from TRANSACTION1 where date1 between ? AND ? ";
+		con=ConnectionProvider.getConnection();
+		ps=con.prepareStatement(query);
+		ps.setString(1, Date1);
+		ps.setString(2, Date2);
+		ResultSet rs1=ps.executeQuery();
+		
+		return rs1;
+		
+	}
+	
+	
 }

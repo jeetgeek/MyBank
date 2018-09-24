@@ -37,10 +37,10 @@ public class ChangePasswordServ extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String password=(String)request.getParameter("Password");
-		String accountnum=(String)request.getParameter("accountnum");
+		String userid=(String)request.getParameter("userid");
 		UserDAO obj=new UserDAO();
 		try {
-			if(obj.changePassword(password, accountnum))
+			if(obj.changePassword(password, userid))
 			{
 				response.sendRedirect("index.jsp");
 				
@@ -49,6 +49,7 @@ public class ChangePasswordServ extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	
 	
 		}
 

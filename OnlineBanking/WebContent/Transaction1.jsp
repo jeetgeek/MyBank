@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -28,33 +29,33 @@
 	<link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 	<!-- //web-fonts -->
-	</head>
-<body background="images/1.jpg">
+</head>
+<body>
 <h1>
 
-		<span>L</span>ogin <span>H</span>ere
+		<span>T</span>ransaction <span>D</span>ate
 		</h1>
 	<!--//header-->
 	<!-- content -->
 	<div class="main-content-agile">
 		<div class="sub-main-w3">
-			<form action="LoginServ" method="post">
+			<form action="TransactionDetail.jsp" method="post">
 				<div class="form-style-agile">
-					<label>User Id</label>
+					<label>Enter From Date</label>
 					<div class="pom-agile">
-						<input placeholder="User Id" name="userid" type="text" required="">
+						<input placeholder="date" name="date1" type="text" required="">
 					</div>
 				</div>
 					<div class="form-style-agile">
-					<label>Password</label>
+					<label>Enter To Date</label>
 					<div class="pom-agile">
-						<input placeholder="Password" name="Password" type="password" id="password" required="">
+						<input placeholder="date" name="date2" type="text"  required="">
 						
 					</div>
 				</div>
 						<div class="clear"></div>
-				<input type="submit" value="Login">
-				<div class="form-style-agile">
+				<input type="submit" value="Submit">
+				<!-- <div class="form-style-agile">
 					
 					<br>New User?	
 					<a href="RegistrationForm.jsp"> Register here</a>	
@@ -63,13 +64,10 @@
 					
 					<br>Forgot Password?	
 					<a href="ForgetPassword.jsp"> Click here</a>	
-					</div>
+					</div> -->
 				
 				
 				
 			</form>
-		</div>
-	</div>
-
 </body>
 </html>

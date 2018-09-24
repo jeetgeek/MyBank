@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <!-- Meta tag Keywords -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8" />
@@ -32,59 +33,50 @@
 	href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
 	rel="stylesheet">
 <!-- //web-fonts -->
-</head>
-<body>
-<h1>
-         <%Object userid=request.getAttribute("userid");
-        System.out.print(userid);%>
-		<span>A</span>ccount <span>R</span>ecovery
-		</h1>
 
+</head>
+<%Object accountnum=request.getAttribute("accountnum") ;%>
+<body background="images/1.jpg">
+	<h1>
+		<span>T</span>ranscation <span>B</span>y <span>D</span>ate
+	</h1>
+	<!--//header-->
+	<!-- content -->
 	<div class="main-content-agile">
 		<div class="sub-main-w3">
-			<form action="ChangePasswordServ" method="post">
-			   
-			   			<input  name="userid" type="hidden"
-							value=<%=userid %> required="">
-					
-				<div class="form-style-agile">
-					<label>New Password</label>
+			<form action="TransactionDateServ" method="post">
+			 
+			 	<div class="form-style-agile">
+					<label>From date</label>
 					<div class="pom-agile">
-						<input placeholder="Password" name="Password" type="password"
-							id="password1" required="">
-					</div>
-				</div>
-				<div class="form-style-agile">
-					<label>Confirm Password</label>
-					<div class="pom-agile">
-						<input placeholder="Confirm Password" name="Confirm Password"
-							type="password" id="password2" required="">
+						<input placeholder="Enter Date" name="date1"
+							type="text" required="">
 					</div>
 				</div>
 
-				
+<div class="form-style-agile">
+					<label>TO date</label>
+					<div class="pom-agile">
+						<input placeholder="Enter Date" name="date2"
+							type="text" required="">
+					</div>
+				</div>
+
+
+
+
+
+
+
+
 				<div class="clear"></div>
-				<input type="submit" value="Submit">
+				<input type="submit" value="Transfer">
 			</form>
 		</div>
 	</div>
-	
-	<script>
-		window.onload = function() {
-			document.getElementById("password1").onchange = validatePassword;
-			document.getElementById("password2").onchange = validatePassword;
-		}
+	<!-- //content -->
 
-		function validatePassword() {
-			var pass2 = document.getElementById("password2").value;
-			var pass1 = document.getElementById("password1").value;
-			if (pass1 != pass2)
-				document.getElementById("password2").setCustomValidity(
-						"Passwords Don't Match");
-			else
-				document.getElementById("password2").setCustomValidity('');
-			//empty string means no validation error
-		}
-	</script>
+
+
 </body>
 </html>

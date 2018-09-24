@@ -59,4 +59,54 @@
     <servlet-name>ChangePasswordServ</servlet-name>
     <url-pattern>/ChangePasswordServ</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FundTransferLoginServ</display-name>
+    <servlet-name>FundTransferLoginServ</servlet-name>
+    <servlet-class>Servlets.FundTransferLoginServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FundTransferLoginServ</servlet-name>
+    <url-pattern>/FundTransferLoginServ</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FundTransfer</display-name>
+    <servlet-name>FundTransfer</servlet-name>
+    <servlet-class>Servlets.FundTransfer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FundTransfer</servlet-name>
+    <url-pattern>/FundTransfer</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FundTransferServ</display-name>
+    <servlet-name>FundTransferServ</servlet-name>
+    <servlet-class>Servlets.FundTransferServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FundTransferServ</servlet-name>
+    <url-pattern>/FundTransferServ</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TransactioByDate</display-name>
+    <servlet-name>TransactioByDate</servlet-name>
+    <servlet-class>Servlets.TransactioByDate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TransactioByDate</servlet-name>
+    <url-pattern>/TransactioByDate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TransactionDateServ</display-name>
+    <servlet-name>TransactionDateServ</servlet-name>
+    <servlet-class>Servlets.TransactionDateServ</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TransactionDateServ</servlet-name>
+    <url-pattern>/TransactionDateServ</url-pattern>
+  </servlet-mapping>
 </web-app>

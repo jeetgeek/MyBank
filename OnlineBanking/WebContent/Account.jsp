@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.UserDAO"%>
+<%@page import="java.util.List"%>
 <%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -46,10 +49,14 @@ body {
 
 </style>
 </head>
+
+
 <body background="images/1.jpg">
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#fundtransfer">Fund Transfer</a>
+
+  <a class="" href=""></a>
+  <a href="Welcome.jsp">Home</a>
+  <a href="FundTransferLogin.jsp">Fund Transfer</a>
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
 </div>
@@ -92,7 +99,7 @@ try{
 PreparedStatement ps;
 Class.forName("oracle.jdbc.driver.OracleDriver");
 Connection c = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
-ps = c.prepareStatement("select * from Transaction"); 
+ps = c.prepareStatement("select * from Transaction "); 
 System.out.print(c);
 System.out.print(ps);
 			
@@ -124,7 +131,7 @@ while(rs.next()){
 %>
 </table></div>
 <%
-System.out.print("aaghdsui");}
+}
 catch(Exception ex)
 {
     out.println(ex);
