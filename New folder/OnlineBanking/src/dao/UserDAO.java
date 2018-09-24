@@ -108,14 +108,14 @@ public class UserDAO {
 	}
 	public ResultSet TransactionByDate(String Date1 , String Date2) throws SQLException
 	{   
-		String query="select * from TRANSACTION1 where date1 between (? and ?) ";
+		String query="select * from TRANSACTION1 where date1 between ? AND ? ";
 		con=ConnectionProvider.getConnection();
 		ps=con.prepareStatement(query);
 		ps.setString(1, Date1);
 		ps.setString(2, Date2);
-		rs=ps.executeQuery();
+		ResultSet rs1=ps.executeQuery();
 		
-		return rs;
+		return rs1;
 		
 	}
 	
