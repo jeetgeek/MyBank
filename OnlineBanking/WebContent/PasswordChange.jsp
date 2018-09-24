@@ -35,8 +35,8 @@
 </head>
 <body>
 <h1>
-         <%Object userid=request.getAttribute("userid");
-        System.out.print(userid);%>
+        <%Object accountnum=request.getAttribute("accountnum");
+        System.out.print(accountnum);%>
 		<span>A</span>ccount <span>R</span>ecovery
 		</h1>
 
@@ -44,8 +44,8 @@
 		<div class="sub-main-w3">
 			<form action="ChangePasswordServ" method="post">
 			   
-			   			<input  name="userid" type="hidden"
-							value=<%=userid %> required="">
+			   			<input  name="accountnum" type="hidden"
+							value=<%=accountnum %> required="">
 					
 				<div class="form-style-agile">
 					<label>New Password</label>

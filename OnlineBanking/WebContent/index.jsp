@@ -42,7 +42,8 @@
 				<div class="form-style-agile">
 					<label>User Id</label>
 					<div class="pom-agile">
-						<input placeholder="User Id" name="userid" type="text" required="">
+						<input placeholder="Your Name" name="Name" type="text" required="">
+						
 					</div>
 				</div>
 					<div class="form-style-agile">

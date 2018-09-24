@@ -7,7 +7,7 @@ String fName;
 String lName;
 String address;
 
-
+String accNo;
 String userId;
 String que;
 String ans;
@@ -31,7 +31,12 @@ public String getAddress() {
 public void setAddress(String address) {
 	this.address = address;
 }
-
+public String getAccNo() {
+	return accNo;
+}
+public void setAccNo(String accNo) {
+	this.accNo = accNo;
+}
 public String getUserId() {
 	return userId;
 }
@@ -66,12 +71,13 @@ public User() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public User(String fName, String lName, String address,  String userId, String que, String ans,
+public User(String fName, String lName, String address, String accNo, String userId, String que, String ans,
 		String password, String confirmPassword) {
 	super();
 	this.fName = fName;
 	this.lName = lName;
 	this.address = address;
+	this.accNo = accNo;
 	this.userId = userId;
 	this.que = que;
 	this.ans = ans;
@@ -80,7 +86,7 @@ public User(String fName, String lName, String address,  String userId, String q
 }
 @Override
 public String toString() {
-	return "User [fName=" + fName + ", lName=" + lName + ", address=" + address + ", userId="
+	return "User [fName=" + fName + ", lName=" + lName + ", address=" + address + ", accNo=" + accNo + ", userId="
 			+ userId + ", que=" + que + ", ans=" + ans + ", password=" + password + ", confirmPassword="
 			+ confirmPassword + "]";
 }

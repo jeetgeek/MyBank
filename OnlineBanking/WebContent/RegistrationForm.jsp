@@ -33,7 +33,7 @@
 	rel="stylesheet">
 <!-- //web-fonts -->
 </head>
-<body background="images/1.jpg">
+<body>
 	<h1>
 
 		<span>R</span>egister <span>H</span>ere
@@ -64,7 +64,13 @@
 							required="">
 					</div>
 				</div>
-				
+				<div class="form-style-agile">
+					<label>Account Number</label>
+					<div class="pom-agile">
+						<input placeholder="Account Number" name="accnum" type="text"
+							required="">
+					</div>
+				</div>
 				<div class="form-style-agile">
 					<label>User Id</label>
 					<div class="pom-agile">

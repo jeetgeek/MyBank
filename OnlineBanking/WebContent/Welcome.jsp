@@ -77,7 +77,7 @@ $(document).ready(function() {
 					<!--navbar-header-->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="Welcome.jsp" class="active">Home</a></li>
+							<li><a href="index.html" class="active">Home</a></li>
 							<li><a href="#about" class="scroll">About</a></li>
 							<li><a href="#services" class="scroll">Services</a></li>
 							<li><a href="index.jsp" class="">Login</a></li>
@@ -282,28 +282,28 @@ banking experience.<p>
 					<div class="services-two-grids">
 						<div class="agileinfo-services-right">
 							<img src="images/10.jpg" alt="" />
-							<h6>Maecenas sollicitudin eros lectus, a rutrum nisi vulputate quis. Proin tempus, lectus vitae gravida suscipit</h6>
+							<h6>The Internet has drastically changed the landscape of the finance industry over the past few years.</h6>
 						</div>
 						<!-- date -->
 						<div id="design" class="date">
 										<div id="cycler">   
 											<div class="date-text">
-												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Lorem ipsum dolor sit amet,</a>
+												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Content marketing </a>
 											</div>
 											<div class="date-text">
-												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Cras vestibulum dapibus <span class="blinking"><img src="images/new.png" alt="" /></span></a>
+												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Search engine optimization <span class="blinking"><img src="images/new.png" alt="" /></span></a>
 											</div>
 											<div class="date-text">
-												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Fusce id molestie mauris</a>
+												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Pay-per-click advertising</a>
 											</div>
 											<div class="date-text">
-												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Aliquam vulputate arcu enim <span class="blinking"><img src="images/new.png" alt="" /></span></a>
+												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Social media marketing <span class="blinking"><img src="images/new.png" alt="" /></span></a>
 											</div>
 											<div class="date-text">
-												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Donec ac turpis aliquet</a>
+												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Reputation management</a>
 											</div>
 											<div class="date-text">
-												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Morbi nec justo ut ex rhoncus luctus</a>
+												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-arrow-right" aria-hidden="true"></i> Our Bank Marketing Strategies</a>
 											</div>
 										</div>
 										<script>
@@ -349,8 +349,8 @@ banking experience.<p>
 						</ul>
 					</div>
 					<div class="col-sm-8 blog-right">
-						<a href="#" data-toggle="modal" data-target="#myModal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet luctus gravida.</a>
-						<p>Sed ut feugiat felis. Morbi tempor ut nibh id consectetur. Morbi turpis arcu, interdum at feugiat non, iaculis id dui. Cras vestibulum dapibus volutpat. Fusce id molestie mauris, nec pulvinar nibh. </p>
+						<a href="#" data-toggle="modal" data-target="#myModal">Financial Marketing Insights</a>
+						<p>Published nearly every day, the Financial Marketing Insights blog by ACTON Financial Marketing is chalk full of practical advice and real world examples. The authors of this website are not distracted by marketing buzz and vogue trends, and instead share their observations on the fundamentals of marketing financial services. </p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -364,8 +364,8 @@ banking experience.<p>
 						</ul>
 					</div>
 					<div class="col-sm-8 blog-right">
-						<a href="#" data-toggle="modal" data-target="#myModal">Etiam ut nibh quis magna placerat euismod ac id eros. Cras eleifend nulla vel eros blandit.</a>
-						<p>Duis sodales eleifend laoreet. Vestibulum luctus venenatis massa, in vulputate mi porta ac. Maecenas sollicitudin eros lectus, a rutrum nisi vulputate quis. Proin tempus, lectus vitae gravida</p>
+						<a href="#" data-toggle="modal" data-target="#myModal">Bank Innovation</a>
+						<p>Bank Innovation, as one voter puts it, “has a mix of news and personal voices on what can make banking better for everyone.” Another added, “It provides great insight along with the latest banking technology news, and tells you more of the story, not just the headline.</p>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -385,9 +385,9 @@ banking experience.<p>
 					<div class="col-md-4 news-right-grid">
 						<div class="agile-news-info">
 							<img src="images/n1.jpg" alt=" " class="img-responsive">
-							<h4><a href="#" data-toggle="modal" data-target="#myModal">Sunt in culpa qui officia velit</a></h4>
+							<h4><a href="#" data-toggle="modal" data-target="#myModal">Reward me for my business</a></h4>
 							<span>19th June | 10:00 - 12:00</span>
-							<p> Integer interdum eros vitae sem ultrices, sed eleifend tellus tincidunt. Nam nisl arcu, porttitor sit amet</p>
+							<p>This point is somewhat vague, but we can assume that people were thinking about rewards programs. Credit card points, discounts for local venues, and free money for opening an account all fit under this category.</p>
 							<div class="agileinfo-news-button">
 								<a href="#" class="hvr-shutter-in-horizontal" data-toggle="modal" data-target="#myModal">More</a>
 							</div>
@@ -396,9 +396,9 @@ banking experience.<p>
 					<div class="col-md-4 news-right-grid">
 						<div class="agile-news-info">
 							<img src="images/n2.jpg" alt=" " class="img-responsive">
-							<h4><a href="#" data-toggle="modal" data-target="#myModal">Neque porro quisquam est</a></h4>
+							<h4><a href="#" data-toggle="modal" data-target="#myModal">Anytime Banking</a></h4>
 							<span>24th Sept | 09:00 - 11:00</span>
-							<p> Integer interdum eros vitae sem ultrices, sed eleifend tellus tincidunt. Nam nisl arcu, porttitor sit amet</p>
+							<p>There are several ways to manage your money from outside a banking office. We are always glad to see you in person, but we know that sometimes it is more convenient to handle your banking from home or while on-the-go.</p>
 							<div class="agileinfo-news-button">
 								<a href="#" class="hvr-shutter-in-horizontal" data-toggle="modal" data-target="#myModal">More</a>
 							</div>
@@ -407,9 +407,9 @@ banking experience.<p>
 					<div class="col-md-4 news-right-grid">
 						<div class="agile-news-info">
 							<img src="images/n3.jpg" alt=" " class="img-responsive">
-							<h4><a href="#" data-toggle="modal" data-target="#myModal">Etiam ut nibh quis magna</a></h4>
+							<h4><a href="#" data-toggle="modal" data-target="#myModal">Show what I am spending on and how to save </a></h4>
 							<span>04th Oct | 12:00 - 02:00</span>
-							<p> Integer interdum eros vitae sem ultrices, sed eleifend tellus tincidunt. Nam nisl arcu, porttitor sit amet</p>
+							<p> Users know that banks have access to their financial data, and they want banks to leverage that data to provide advice on how they can succeed in their financial life and show us the various fields of the investment of the money.</p>
 							<div class="agileinfo-news-button">
 								<a href="#" class="hvr-shutter-in-horizontal" data-toggle="modal" data-target="#myModal">More</a>
 							</div>
@@ -430,7 +430,7 @@ banking experience.<p>
 							<div class="modal-body">
 								<div class="agileits-w3layouts-info">
 									<img src="images/g2.jpg" alt="" />
-									<p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis porttitor quis. Suspendisse ultrices hendrerit massa. Nam id metus id tellus ultrices ullamcorper.  Cras tempor massa luctus, varius lacus sit amet, blandit lorem. Duis auctor in tortor sed tristique. Proin sed finibus sem.</p>
+									<p>Over time, consumers have come to depend on and trust the Automatic Teller Machine (ATM) to conveniently meet their banking needs. But in recent time there have been a proliferation of ATM frauds in the country even and across the globe. Managing the risk associated with ATM fraud as well as diminishing its impact is an important issue that face financial institutions as fraud techniques have become more advanced with increased occurrences. The ATM is only one of many Electronic Funds Transfer (EFT) devices that are vulnerable to fraud attacks. This paper carried out an empirical research to analyse the cases of ATM usage and fraud occurrences within some banks in Minna</p>
 								</div>
 							</div>
 						</div>
@@ -451,7 +451,7 @@ banking experience.<p>
 					<div class="item">
 						<div class="feedback-info">
 							<div class="feedback-top">
-								<p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula pellentesque. </p>
+								<p> Best Customer Services and I have experience of 5 years with Infogain Bank.  </p>
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
@@ -468,7 +468,7 @@ banking experience.<p>
 					<div class="item">
 						<div class="feedback-info">
 							<div class="feedback-top">
-								<p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula pellentesque. </p>
+								<p> Best Customer Services and I have experience of 2 years with Infogain Bank. </p>
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
@@ -485,7 +485,7 @@ banking experience.<p>
 					<div class="item">
 						<div class="feedback-info">
 							<div class="feedback-top">
-								<p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula pellentesque. </p>
+								<p> Best Customer Services and I have experience of 3 years with Infogain Bank. </p>
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
@@ -502,7 +502,7 @@ banking experience.<p>
 					<div class="item">
 						<div class="feedback-info">
 							<div class="feedback-top">
-								<p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula pellentesque. </p>
+								<p> Best Customer Services and I have experience of 10 years with Infogain Bank. </p>
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
@@ -519,15 +519,15 @@ banking experience.<p>
 					<div class="item">
 						<div class="feedback-info">
 							<div class="feedback-top">
-								<p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula pellentesque. </p>
+								<p> Best Customer Services and I have experience of 5 years with Infogain Bank.  </p>
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
-									<img src="images/f2.jpg" alt="" />
+									<img src="images/jit.jpg.jfif" alt="" />
 								</div>
 								<div class="feedback-img-info">
-									<h5>Peter guptill</h5>
-									<p>Vestibulum</p>
+									<h5>Jitendra Budiya</h5>
+									<p>California</p>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -536,15 +536,15 @@ banking experience.<p>
 					<div class="item">
 						<div class="feedback-info">
 							<div class="feedback-top">
-								<p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula pellentesque. </p>
+								<p> Best Customer Services and I have experience of 5 years with Infogain Bank. </p>
 							</div>
 							<div class="feedback-grids">
 								<div class="feedback-img">
 									<img src="images/f3.jpg" alt="" />
 								</div>
 								<div class="feedback-img-info">
-									<h5>Steven Wilson</h5>
-									<p>Vestibulum</p>
+									<h5>Rashi Jain</h5>
+									<p>India</p>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -596,7 +596,7 @@ banking experience.<p>
 						<h5>Get in touch</h5>
 						<ul>
 							<li>+1 234 567 8901</li>
-							<li>+1 234 567 8902</li>
+							<li>+91 123 456 7890</li>
 						</ul>
 					</div>
 					<div class="agileits-w3layouts-address-top">
@@ -611,7 +611,7 @@ banking experience.<p>
 					<div class="agileits-w3layouts-address-top">
 						<h5>Email</h5>
 						<ul>
-							<li><a href="mailto:info@example.com"> mail@example.com</a></li>
+							<li><a href="mailto:info@example.com"> choudharyjitendra@gmail.com</a></li>
 						</ul>
 					</div>
 				</div>
@@ -637,7 +637,7 @@ banking experience.<p>
 				</ul>
 			</div>
 			<div class="copyright">
-				<p>� 2017 Net Banking. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+				<p>© 2017 Net Banking. All rights reserved | Design by <a href="https://www.linkedin.com/in/jitendra-choudhary-48ba6312b/">Jitendra Budiya</a></p>
 			</div>
 		</div>
 	</div>

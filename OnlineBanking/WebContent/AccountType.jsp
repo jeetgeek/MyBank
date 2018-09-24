@@ -1,7 +1,3 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="dao.UserDAO"%>
-<%@page import="java.util.List"%>
-<%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -20,23 +16,6 @@
 		<link rel="stylesheet" type="text/css" href="css/component1.css" />
 		<script src="js/modernizr1.custom.js"></script>
 </head>
-<%Object userid=request.getAttribute("userid");
-        System.out.print(userid.toString());
-        List<String>accountlist=new ArrayList<String>();
-        UserDAO obj=new UserDAO();
-        ResultSet rs=obj.accountype(userid.toString());
-      
-      
-       while(rs.next())
-       {
-    	   accountlist.add(rs.getString(1));
-    	   
-       }
-      /*  for(int i=0;i<accountlist.size();i++)
-       {
-    	   System.out.print(accountlist.get(i));
-       } */
-       %>
 <body background="images/1.jpg">
 
 <div class="container">	
@@ -48,11 +27,11 @@
 					<nav class="dr-menu">
 						<div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Account</a></div>
 						<ul>
-							<% for(int i=0;i<accountlist.size();i++)
-					       { %>
-					       <li><a class="dr-icon " href="Account.jsp"><%=accountlist.get(i) %></a></li>
-					       <%} %>
-							</ul>
+							<li><a class="dr-icon " href="Account.jsp">Saving Account</a></li>
+							<li><a class="dr-icon " href="#">Salary Account</a></li>
+							<li><a class="dr-icon" href="#">Current Account</a></li>
+							<li><a class="dr-icon" href="#">Logout</a></li>
+						</ul>
 					</nav>
 				</div>
 			</div>
