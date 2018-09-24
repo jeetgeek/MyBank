@@ -95,4 +95,16 @@ public class UserDAO {
 		return rs;
 		
 	}
+	public boolean validateTransactionPassword(String accountnum,String password) throws SQLException
+	{ 	String query="select * from Account where account_num1=? and transaction_password=?";
+		con=ConnectionProvider.getConnection();
+		ps=con.prepareStatement(query);
+		ps.setString(1, accountnum);
+		ps.setString(2, password);
+		rs=ps.executeQuery();
+		
+	boolean result=rs.next();
+		return result;	
+	}
+	
 }

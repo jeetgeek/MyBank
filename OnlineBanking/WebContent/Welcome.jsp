@@ -77,7 +77,7 @@ $(document).ready(function() {
 					<!--navbar-header-->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="index.html" class="active">Home</a></li>
+							<li><a href="Welcome.jsp" class="active">Home</a></li>
 							<li><a href="#about" class="scroll">About</a></li>
 							<li><a href="#services" class="scroll">Services</a></li>
 							<li><a href="index.jsp" class="">Login</a></li>
