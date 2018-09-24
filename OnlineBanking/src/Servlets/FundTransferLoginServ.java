@@ -26,8 +26,9 @@ public class FundTransferLoginServ extends HttpServlet {
 		try {
 			if(obj.validateTransactionPassword(accountnum, password))
 			{
-
+                 
 				request.setAttribute("accountnum", accountnum);
+				
 				RequestDispatcher rs= request.getRequestDispatcher("FundTransfer.jsp");
 				rs.forward(request, response);
 			}

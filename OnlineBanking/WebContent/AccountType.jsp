@@ -32,10 +32,7 @@
     	   accountlist.add(rs.getString(1));
     	   
        }
-      /*  for(int i=0;i<accountlist.size();i++)
-       {
-    	   System.out.print(accountlist.get(i));
-       } */
+     
        %>
 <body background="images/1.jpg">
 
@@ -49,8 +46,8 @@
 						<div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">Account</a></div>
 						<ul>
 							<% for(int i=0;i<accountlist.size();i++)
-					       { %>
-					       <li><a class="dr-icon " href="Account.jsp"><%=accountlist.get(i) %></a></li>
+					       {%>
+					       <li><a class="dr-icon " href="Account.jsp?val=<%=accountlist.get(i) %>&userid=<%=userid%>"><%=accountlist.get(i) %></a></li>
 					       <%} %>
 							</ul>
 					</nav>

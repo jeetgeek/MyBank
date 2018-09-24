@@ -44,11 +44,11 @@
 	<!-- content -->
 	<div class="main-content-agile">
 		<div class="sub-main-w3">
-			<form action="" method="post">
+			<form action="FundTransferServ?value=<%=accountnum %>" method="post">
 				<div class="form-style-agile">
 					<label>From Account</label>
 					<div class="pom-agile">
-						<input placeholder=<%=accountnum %> name="accountnum1" disabled="disabled">
+						<input placeholder=<%=accountnum %> name="accountnum1"   disabled="disabled">
 					</div>
 				</div>
 				<div class="form-style-agile">

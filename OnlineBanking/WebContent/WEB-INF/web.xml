@@ -89,24 +89,4 @@
     <servlet-name>FundTransferServ</servlet-name>
     <url-pattern>/FundTransferServ</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>TransactioByDate</display-name>
-    <servlet-name>TransactioByDate</servlet-name>
-    <servlet-class>Servlets.TransactioByDate</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>TransactioByDate</servlet-name>
-    <url-pattern>/TransactioByDate</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>TransactionDateServ</display-name>
-    <servlet-name>TransactionDateServ</servlet-name>
-    <servlet-class>Servlets.TransactionDateServ</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>TransactionDateServ</servlet-name>
-    <url-pattern>/TransactionDateServ</url-pattern>
-  </servlet-mapping>
 </web-app>

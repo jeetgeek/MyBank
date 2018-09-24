@@ -50,7 +50,11 @@ body {
 </style>
 </head>
 
-
+<%Object val=request.getParameter("val");
+System.out.print(val);
+Object userid=request.getParameter("userid");
+System.out.print(userid);
+%>
 <body background="images/1.jpg">
 <div class="topnav">
 
@@ -68,61 +72,43 @@ body {
 <% 
 
 try{
-PreparedStatement ps;
-Class.forName("oracle.jdbc.driver.OracleDriver");
-Connection c = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
-ps = c.prepareStatement("select * from account"); 
-
-ResultSet rs = ps.executeQuery();
-while(rs.next()){
+	UserDAO obj=new UserDAO();
+ResultSet rs1 = obj.showAccountDetail(val.toString(), userid.toString());
+while(rs1.next()){
 %>
 <div style="background-color:lightblue">
-<%=rs.getString(2) %>
+<%=rs1.getString(1) %>
 <center>
 
-balance&nbsp; &nbsp;<%=rs.getString(3) %>
+balance&nbsp; &nbsp;<%=rs1.getString(2) %>
 
 </center></div>
-<% 
-}
-}
-catch(Exception ex)
-{
-    out.println(ex);
- }
+<div class="">
+						<select name="select"  onchange="report(this.value)">
+						<option value="select your choice">select your choice</option>
+							<option value="ministatement">Mini Statement</option>
+							<option value="onemonth ">one month </option>
+							<option value="threemonth">three month</option>
+						</select> <br>
+					</div>
+<%
 
-%>
-<% 
-System.out.print("try ");
-try{
-	System.out.print("try ");
-PreparedStatement ps;
-Class.forName("oracle.jdbc.driver.OracleDriver");
-Connection c = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
-ps = c.prepareStatement("select * from Transaction "); 
-System.out.print(c);
-System.out.print(ps);
-			
-ResultSet rs = ps.executeQuery();
-System.out.print(rs);
+}
+ResultSet rs=obj.showTransaction(val.toString(), userid.toString());
+
 while(rs.next()){
-	System.out.print("while");
+	
 	%>
 	<div style="background-color:lightpink">
 	<b>Transaction Details</b>
 <table style="width:100%">
 <tr>
-<th>Date</th>
-    <th>Narration</th> 
-    <th>Reference Number</th>
-    <th>value date</th> 
-    <th>Withdrawal</th>
-    <th>deposit</th> 
-    <th>closing balance</th>
+     <th>Date</th>
+     <th>Reference Number</th>
+    <th>Amount</th> 
     </tr>
- <tr><td><%=rs.getString(1)%></td><td><%=rs.getString(2)%></td><td>
- <%=rs.getString(3) %></td><td><%=rs.getString(4) %></td><td><%=rs.getInt(5) %></td><td><%=rs.getInt(6) %></td><td>
-       <%=rs.getInt(7) %></td></tr>
+ <tr><td><%=rs.getString(3)%></td><td><%=rs.getString(2)%></td><td>
+ <%=rs.getString(4) %></td></tr>
        
 
 <% 
@@ -130,13 +116,34 @@ while(rs.next()){
 }
 %>
 </table></div>
-<%
-}
+
+<% }
 catch(Exception ex)
 {
     out.println(ex);
  }
+
 %>
+
+<script type="text/javascript">
+function report(func)
+{
+    func();
+}
+
+function ministatement()
+{
+    alert('ministatement');
+    
+    
+}
+
+function monthly()
+{
+    alert('monthly');
+}
+</script>
+ 
 
 </body>
 </html>

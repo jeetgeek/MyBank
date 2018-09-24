@@ -1,14 +1,16 @@
-package Servlets;
+ package Servlets;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class FundTransferServ
- */
+import dao.UserDAO;
+
 public class FundTransferServ extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -20,20 +22,32 @@ public class FundTransferServ extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String accountnum1 =(String)request.getParameter("value");
+		System.out.println(accountnum1);
+		String accountnum2 =(String)request.getParameter("accountnum2");
+		String amount=(String)request.getParameter("amount");
+		UserDAO obj=new UserDAO();
+		try {
+			if(obj.validateReceiverAccountNumber(accountnum2))
+			{
+                 obj.fundTransfer(accountnum1, accountnum2, amount);
+                 obj.deposit(accountnum2, amount);
+                 obj.withdrawl(accountnum1, amount);
+				request.setAttribute("amount", amount);
+				RequestDispatcher rs= request.getRequestDispatcher("Transfered.jsp");
+				rs.forward(request, response);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
