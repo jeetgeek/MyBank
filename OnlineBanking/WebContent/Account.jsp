@@ -69,11 +69,13 @@ body {
 
 
 <%session=request.getSession(false);
+
 Object userid=null;
 if(session!=null)
 {  List<String> i=(List<String>)session.getAttribute("accountlist");
-Object val=request.getParameter("val");
-     System.out.print("account:"+i.get(Integer.parseInt(val.toString())));
+     String  val=(String)request.getParameter("val");
+     System.out.print(val);
+    /*  System.out.print("account:"+i.get(Integer.parseInt(val.toString()))); */
 	userid=session.getAttribute("userid");
 	
 try{
@@ -121,8 +123,9 @@ else
   </tr>
  <%UserDAO obj1=new UserDAO();
  System.out.print(userid);
- Object val=request.getParameter("val");
-  ResultSet rs1=obj1.ministatement(val.toString(),userid.toString());
+ List<String> i=(List<String>)session.getAttribute("accountlist");
+ String  val=(String)request.getParameter("val");
+  ResultSet rs1=obj1.ministatement(i.get(Integer.parseInt(val.toString())),userid.toString());
   while(rs1.next())
   {%>
   <tr><td><%=rs1.getString(3)%></td><td><%=rs1.getString(2)%></td><td>
@@ -143,8 +146,9 @@ else
   </tr>
  <%
  System.out.print(userid);
-  Object val2=request.getParameter("val");
- rs1=obj1.onemonth(val2.toString(),userid.toString());
+ 
+ 
+ rs1=obj1.onemonth(i.get(Integer.parseInt(val.toString())),userid.toString());
   while(rs1.next())
   {%>
   <tr><td><%=rs1.getString(3)%></td><td><%=rs1.getString(2)%></td><td>
@@ -164,8 +168,7 @@ else
   </tr>
  <%
  System.out.print(userid);
- Object val1=request.getParameter("val");
-   rs1=obj1.threemonth(val1.toString(),userid.toString());
+  rs1=obj1.threemonth(i.get(Integer.parseInt(val.toString())),userid.toString());
   while(rs1.next())
   {%>
   <tr><td><%=rs1.getString(3)%></td><td><%=rs1.getString(2)%></td><td>
