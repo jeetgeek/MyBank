@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.UserDAO;
 
@@ -37,7 +38,9 @@ public class LoginServ extends HttpServlet {
 		try {
 			if(obj.validateUser(userid, password))
 			{
-
+                HttpSession session=request.getSession(true);
+                session.setAttribute("userid", userid);
+                session.setMaxInactiveInterval(60*10);
 				request.setAttribute("userid", userid);
 				RequestDispatcher rs= request.getRequestDispatcher("AccountType.jsp");
 				rs.forward(request, response);
